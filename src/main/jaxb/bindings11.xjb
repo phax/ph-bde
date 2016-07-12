@@ -27,16 +27,6 @@
       </nameXmlTransform>
     </schemaBindings>
   </bindings>
-  <bindings schemaLocation="../resources/schemas/bde11/common/BDE-XAdES01903v132-201601-1.1.xsd" node="/xsd:schema">
-    <schemaBindings>
-      <package name="com.helger.bde.v11.xades132" />
-    </schemaBindings>
-  </bindings>
-  <bindings schemaLocation="../resources/schemas/bde11/common/BDE-XAdES01903v141-201601-1.1.xsd" node="/xsd:schema">
-    <schemaBindings>
-      <package name="com.helger.bde.v11.xades141" />
-    </schemaBindings>
-  </bindings>
   <bindings schemaLocation="../resources/schemas/bde11/common/CCTS_CCT_SchemaModule-1.1.xsd" node="/xsd:schema">
     <schemaBindings>
       <package name="com.helger.bde.v11.ccts.schemamodule" />
