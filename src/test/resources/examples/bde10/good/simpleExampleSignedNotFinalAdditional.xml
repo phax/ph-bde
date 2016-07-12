@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+     Business Document Envelope Version 1.0
+     Committee Specification 01  
+     02 August 2015
+     Copyright (c) OASIS Open 2015. All Rights Reserved.
+     Source: http://docs.oasis-open.org/bdxr/bdx-bde/v1.0/cs01/xsd/
+
+     
+-->
+<Envelope xmlns="http://docs.oasis-open.org/bdxr/ns/bde/1.0/Envelope" xmlns:ebc="http://docs.oasis-open.org/bdxr/ns/bde/1.0/BasicComponents" xmlns:eac="http://docs.oasis-open.org/bdxr/ns/bde/1.0/AggregateComponents">
+  <ebc:ID>123</ebc:ID>
+  <ebc:CreationDateTime>2015-02-08T20:34:00-04:00</ebc:CreationDateTime>
+  <eac:FromParty>
+    <ebc:ID>A</ebc:ID>
+  </eac:FromParty>
+  <eac:ToParty>
+    <ebc:ID>B</ebc:ID>
+  </eac:ToParty>
+  <eac:Payload>
+    <eac:PayloadContent>
+      <myDocumentHere>
+        <myElement>My Content</myElement>
+        <myElement>My Content</myElement>
+        <myElement>My Content</myElement>
+      </myDocumentHere>
+    </eac:PayloadContent>
+  </eac:Payload>
+  <eac:Payload>
+    <eac:PayloadContent>
+Non-XML payload here, with sensitive characters 
+escaped such as &amp;, &lt; and ]]&gt;.
+
+Any text, provided it has been escaped, can be included in a payload.
+    </eac:PayloadContent>
+  </eac:Payload>
+  <eac:Payload>
+    <eac:PayloadContent>
+      <myOtherDocumentHere>
+        <myOtherElement>My Content</myOtherElement>
+        <myOtherElement>My Content</myOtherElement>
+        <myOtherElement>My Content</myOtherElement>
+      </myOtherDocumentHere>
+    </eac:PayloadContent>
+  </eac:Payload>
+<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+  <ds:SignedInfo>
+    <ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+    <ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+    <ds:Reference URI="">
+      <ds:Transforms>
+        <ds:Transform Algorithm="http://www.w3.org/TR/1999/REC-xpath-19991116">
+          <ds:XPath xmlns:sig="urn:oasis:names:specification:ubl:schema:xsd:CommonSignatureComponents-2">
+        count(ancestor-or-self::ds:Signature)=0
+          </ds:XPath>
+        </ds:Transform>
+      </ds:Transforms>
+      <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+      <ds:DigestValue>Sv7Fb7FyqiUnKMupWkQvShrUO5E=</ds:DigestValue>
+    </ds:Reference>
+  </ds:SignedInfo>
+  <ds:SignatureValue>BtMFWHcuwLeSSSxhpqcxk0FwiFb7eoDuNH5paJsIQdytPeBaCmkCz3V509EdMGE2
+FrfhCLhZTsM6MYjaoD3ZcjQdx6KuwQG+9XcwXGuRwLcFsDrHwt/rLx0junEd9ZhP
+wJgqT2F2gP07QLSlK3JfJ7+97dy3rClW0pI34tX+OXk=</ds:SignatureValue>
+  <ds:KeyInfo>
+    <ds:KeyValue>
+<ds:RSAKeyValue>
+<ds:Modulus>
+py4IEpcmEme8tWue8eyBrXanA8g6HihApWjHxgTntA+pcAVUel5VQah2Ck15joL+
+x76cj0vhjh7gRh+94hYX0AaokWDVmtutHmgnUFJLlHnUYsw/iCGfmrL5B5hKl2D2
+H0jkXyzzcHIMHjXb2XLrpbPBA7cnBUlQTE3FNBjgwQc=
+</ds:Modulus>
+<ds:Exponent>
+AQAB
+</ds:Exponent>
+</ds:RSAKeyValue>
+</ds:KeyValue>
+    <ds:X509Data>
+      
+      
+      
+    <ds:X509Certificate>MIICbTCCAdYCCQCF3wdAR36ZbzANBgkqhkiG9w0BAQUFADB7MQswCQYDVQQGEwJD
+QTEQMA4GA1UECAwHT250YXJpbzEPMA0GA1UEBwwGT3R0YXdhMR8wHQYDVQQKDBZD
+cmFuZSBTb2Z0d3JpZ2h0cyBMdGQuMSgwJgYJKoZIhvcNAQkBFhlpbmZvQENyYW5l
+U29mdHdyaWdodHMuY29tMB4XDTE1MDIxNTAxNTEzMFoXDTE1MDMxNzAxNTEzMFow
+ezELMAkGA1UEBhMCQ0ExEDAOBgNVBAgMB09udGFyaW8xDzANBgNVBAcMBk90dGF3
+YTEfMB0GA1UECgwWQ3JhbmUgU29mdHdyaWdodHMgTHRkLjEoMCYGCSqGSIb3DQEJ
+ARYZaW5mb0BDcmFuZVNvZnR3cmlnaHRzLmNvbTCBnzANBgkqhkiG9w0BAQEFAAOB
+jQAwgYkCgYEApy4IEpcmEme8tWue8eyBrXanA8g6HihApWjHxgTntA+pcAVUel5V
+Qah2Ck15joL+x76cj0vhjh7gRh+94hYX0AaokWDVmtutHmgnUFJLlHnUYsw/iCGf
+mrL5B5hKl2D2H0jkXyzzcHIMHjXb2XLrpbPBA7cnBUlQTE3FNBjgwQcCAwEAATAN
+BgkqhkiG9w0BAQUFAAOBgQCESkODQIYMAV6a2ne8MgJ83o/aRDZBCvFZTqFWqSDu
+xwCgvZwCIGn+wgUt/I44gMVLxQCOQFcUC5K95LVomxgt0oBg0sT5iVRDX1UG7tWl
+jIKWN355tXcWxx93SwPN5qotDUGXaLns1iscJnN1VpjOgy0buaNrQimj5zfLDCN+
+DA==</ds:X509Certificate>
+<ds:X509SubjectName>emailAddress=info@CraneSoftwrights.com,O=Crane Softwrights Ltd.,L=Ottawa,ST=Ontario,C=CA</ds:X509SubjectName>
+<ds:X509IssuerSerial>
+<ds:X509IssuerName>emailAddress=info@CraneSoftwrights.com,O=Crane Softwrights Ltd.,L=Ottawa,ST=Ontario,C=CA</ds:X509IssuerName>
+<ds:X509SerialNumber>9646436899509672303</ds:X509SerialNumber>
+</ds:X509IssuerSerial>
+</ds:X509Data>
+  </ds:KeyInfo>
+</ds:Signature><ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+  <ds:SignedInfo>
+    <ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+    <ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+    <ds:Reference URI="">
+      <ds:Transforms>
+        <ds:Transform Algorithm="http://www.w3.org/TR/1999/REC-xpath-19991116">
+          <ds:XPath xmlns:sig="urn:oasis:names:specification:ubl:schema:xsd:CommonSignatureComponents-2">
+        count(ancestor-or-self::ds:Signature)=0
+          </ds:XPath>
+        </ds:Transform>
+      </ds:Transforms>
+      <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+      <ds:DigestValue>Sv7Fb7FyqiUnKMupWkQvShrUO5E=</ds:DigestValue>
+    </ds:Reference>
+  </ds:SignedInfo>
+  <ds:SignatureValue>BtMFWHcuwLeSSSxhpqcxk0FwiFb7eoDuNH5paJsIQdytPeBaCmkCz3V509EdMGE2
+FrfhCLhZTsM6MYjaoD3ZcjQdx6KuwQG+9XcwXGuRwLcFsDrHwt/rLx0junEd9ZhP
+wJgqT2F2gP07QLSlK3JfJ7+97dy3rClW0pI34tX+OXk=</ds:SignatureValue>
+  <ds:KeyInfo>
+    <ds:KeyValue>
+<ds:RSAKeyValue>
+<ds:Modulus>
+py4IEpcmEme8tWue8eyBrXanA8g6HihApWjHxgTntA+pcAVUel5VQah2Ck15joL+
+x76cj0vhjh7gRh+94hYX0AaokWDVmtutHmgnUFJLlHnUYsw/iCGfmrL5B5hKl2D2
+H0jkXyzzcHIMHjXb2XLrpbPBA7cnBUlQTE3FNBjgwQc=
+</ds:Modulus>
+<ds:Exponent>
+AQAB
+</ds:Exponent>
+</ds:RSAKeyValue>
+</ds:KeyValue>
+    <ds:X509Data>
+      
+      
+      
+    <ds:X509Certificate>MIICbTCCAdYCCQCF3wdAR36ZbzANBgkqhkiG9w0BAQUFADB7MQswCQYDVQQGEwJD
+QTEQMA4GA1UECAwHT250YXJpbzEPMA0GA1UEBwwGT3R0YXdhMR8wHQYDVQQKDBZD
+cmFuZSBTb2Z0d3JpZ2h0cyBMdGQuMSgwJgYJKoZIhvcNAQkBFhlpbmZvQENyYW5l
+U29mdHdyaWdodHMuY29tMB4XDTE1MDIxNTAxNTEzMFoXDTE1MDMxNzAxNTEzMFow
+ezELMAkGA1UEBhMCQ0ExEDAOBgNVBAgMB09udGFyaW8xDzANBgNVBAcMBk90dGF3
+YTEfMB0GA1UECgwWQ3JhbmUgU29mdHdyaWdodHMgTHRkLjEoMCYGCSqGSIb3DQEJ
+ARYZaW5mb0BDcmFuZVNvZnR3cmlnaHRzLmNvbTCBnzANBgkqhkiG9w0BAQEFAAOB
+jQAwgYkCgYEApy4IEpcmEme8tWue8eyBrXanA8g6HihApWjHxgTntA+pcAVUel5V
+Qah2Ck15joL+x76cj0vhjh7gRh+94hYX0AaokWDVmtutHmgnUFJLlHnUYsw/iCGf
+mrL5B5hKl2D2H0jkXyzzcHIMHjXb2XLrpbPBA7cnBUlQTE3FNBjgwQcCAwEAATAN
+BgkqhkiG9w0BAQUFAAOBgQCESkODQIYMAV6a2ne8MgJ83o/aRDZBCvFZTqFWqSDu
+xwCgvZwCIGn+wgUt/I44gMVLxQCOQFcUC5K95LVomxgt0oBg0sT5iVRDX1UG7tWl
+jIKWN355tXcWxx93SwPN5qotDUGXaLns1iscJnN1VpjOgy0buaNrQimj5zfLDCN+
+DA==</ds:X509Certificate>
+<ds:X509SubjectName>emailAddress=info@CraneSoftwrights.com,O=Crane Softwrights Ltd.,L=Ottawa,ST=Ontario,C=CA</ds:X509SubjectName>
+<ds:X509IssuerSerial>
+<ds:X509IssuerName>emailAddress=info@CraneSoftwrights.com,O=Crane Softwrights Ltd.,L=Ottawa,ST=Ontario,C=CA</ds:X509IssuerName>
+<ds:X509SerialNumber>9646436899509672303</ds:X509SerialNumber>
+</ds:X509IssuerSerial>
+</ds:X509Data>
+  </ds:KeyInfo>
+</ds:Signature></Envelope>

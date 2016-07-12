@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+     Business Document Envelope Version 1.0
+     Committee Specification 01  
+     02 August 2015
+     Copyright (c) OASIS Open 2015. All Rights Reserved.
+     Source: http://docs.oasis-open.org/bdxr/bdx-bde/v1.0/cs01/xsd/
+
+     
+-->
+<Envelope xmlns="http://docs.oasis-open.org/bdxr/ns/bde/1.0/Envelope"
+  xmlns:ebc="http://docs.oasis-open.org/bdxr/ns/bde/1.0/BasicComponents"
+  xmlns:eac="http://docs.oasis-open.org/bdxr/ns/bde/1.0/AggregateComponents">
+  <ebc:ID>123</ebc:ID>
+  <ebc:CreationDateTime>2015-02-08T20:34:00-04:00</ebc:CreationDateTime>
+  <eac:FromParty>
+    <ebc:ID>A</ebc:ID>
+  </eac:FromParty>
+  <eac:ToParty>
+    <ebc:ID>B</ebc:ID>
+  </eac:ToParty>
+  <eac:Payload>
+    <eac:PayloadContent>
+      <myDocumentHere>
+        <myElement>My Content</myElement>
+        <myElement>My Content</myElement>
+        <myElement>My Content</myElement>
+      </myDocumentHere>
+    </eac:PayloadContent>
+  </eac:Payload>
+  <eac:Payload>
+    <ebc:InstanceSyntaxID schemeID="MIME">text/plain</ebc:InstanceSyntaxID>
+    <eac:PayloadContent>
+Non-XML payload here, with sensitive characters 
+escaped such as &amp;, &lt; and ]]&gt;.
+
+Any text, provided it has been escaped, can be included in a payload.
+    </eac:PayloadContent>
+  </eac:Payload>
+  <eac:Payload>
+    <eac:PayloadContent>
+      <myOtherDocumentHere>
+        <myOtherElement>My Content</myOtherElement>
+        <myOtherElement>My Content</myOtherElement>
+        <myOtherElement>My Content</myOtherElement>
+      </myOtherDocumentHere>
+    </eac:PayloadContent>
+  </eac:Payload>
+</Envelope>
