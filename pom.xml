@@ -105,6 +105,10 @@
       <groupId>com.helger</groupId>
       <artifactId>ph-xsds-xades141</artifactId>
     </dependency>
+    <dependency>
+      <groupId>com.helger</groupId>
+      <artifactId>ph-xsds-ccts-cct-schemamodule</artifactId>
+    </dependency>
     
     <dependency>
       <groupId>junit</groupId>
@@ -220,6 +224,10 @@
             <episode>
               <groupId>com.helger</groupId>
               <artifactId>ph-xsds-xades141</artifactId>
+            </episode>
+            <episode>
+              <groupId>com.helger</groupId>
+              <artifactId>ph-xsds-ccts-cct-schemamodule</artifactId>
             </episode>
           </episodes>
         </configuration>

@@ -27,11 +27,6 @@
       </nameXmlTransform>
     </schemaBindings>
   </bindings>
-  <bindings schemaLocation="../resources/schemas/bde10/common/CCTS_CCT_SchemaModule-1.0.xsd" node="/xsd:schema">
-    <schemaBindings>
-      <package name="com.helger.bde.v10.ccts.schemamodule" />
-    </schemaBindings>
-  </bindings>
   <bindings schemaLocation="../resources/schemas/bde10/common/BDE-CommonAggregateComponents-1.0.xsd" node="/xsd:schema">
     <schemaBindings>
       <package name="com.helger.bde.v10.cac" />
