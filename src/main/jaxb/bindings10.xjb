@@ -27,16 +27,6 @@
       </nameXmlTransform>
     </schemaBindings>
   </bindings>
-  <bindings schemaLocation="../resources/schemas/bde10/common/BDE-xmldsig-core-schema-1.0.xsd" node="/xsd:schema">
-    <schemaBindings>
-      <package name="com.helger.bde.v10.xmldsig" />
-    </schemaBindings>
-  </bindings>
-  <bindings schemaLocation="../resources/schemas/bde10/common/BDE-xmldsig11-schema-1.0.xsd" node="/xsd:schema">
-    <schemaBindings>
-      <package name="com.helger.bde.v10.xmldsig11" />
-    </schemaBindings>
-  </bindings>
   <bindings schemaLocation="../resources/schemas/bde10/common/BDE-XAdESv132-1.0.xsd" node="/xsd:schema">
     <schemaBindings>
       <package name="com.helger.bde.v10.xades132" />
