@@ -146,7 +146,23 @@
                 <schemaInclude>BDE-Envelope-1.0.xsd</schemaInclude>
               </schemaIncludes>
               <bindingIncludes>
-                <bindingInclude>bindings.xjb</bindingInclude>
+                <bindingInclude>bindings10.xjb</bindingInclude>
+              </bindingIncludes>
+            </configuration>
+          </execution>
+          <execution>
+            <id>bde11</id>
+            <goals>
+              <goal>generate</goal>
+            </goals>
+            <configuration>
+              <generateDirectory>${project.build.directory}/generated-sources/bde11</generateDirectory>
+              <schemaDirectory>${basedir}/src/main/resources/schemas/bde11</schemaDirectory>
+              <schemaIncludes>
+                <schemaInclude>BDE-Envelope-1.1.xsd</schemaInclude>
+              </schemaIncludes>
+              <bindingIncludes>
+                <bindingInclude>bindings11.xjb</bindingInclude>
               </bindingIncludes>
             </configuration>
           </execution>

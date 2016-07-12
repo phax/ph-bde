@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Library:           OASIS Business Document Envelope (BDE) 1.1 CSD02
+                     http://docs.oasis-open.org/bdxr/bdx-bde/v1.1/csd02/
+  Release Date:      20 July 2015
+  Module:            xsd/common/BDE-CommonAggregateComponents-1.1.xsd
+  Generated on:      2016-07-07 14:55z
+  Copyright (c) OASIS Open 2015. All Rights Reserved.
+-->
+<xsd:schema xmlns="http://docs.oasis-open.org/bdxr/ns/bde/1.0/AggregateComponents"
+            xmlns:eac="http://docs.oasis-open.org/bdxr/ns/bde/1.0/AggregateComponents"
+            xmlns:cbc="http://docs.oasis-open.org/bdxr/ns/bde/1.0/BasicComponents"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+            targetNamespace="http://docs.oasis-open.org/bdxr/ns/bde/1.0/AggregateComponents"
+            elementFormDefault="qualified"
+            attributeFormDefault="unqualified"
+            version="1.1">
+   <!-- ===== Imports ===== -->
+   <xsd:import namespace="http://docs.oasis-open.org/bdxr/ns/bde/1.0/BasicComponents"
+               schemaLocation="BDE-CommonBasicComponents-1.1.xsd"/>
+    <!-- ==== Incorporate any desired constraints on the payload -->
+    <xsd:include schemaLocation="BDE-PayloadContentDataType-1.1.xsd"/>
+        
+   <!-- ===== Element Declarations ===== -->
+   <xsd:element name="ExternalReference" type="ExternalReferenceType"/>
+   <xsd:element name="FromParty" type="PartyType"/>
+   <xsd:element name="InstanceDecryptionInformationExternalReference"
+                type="ExternalReferenceType"/>
+   <xsd:element name="InstanceDecryptionKeyExternalReference"
+                type="ExternalReferenceType"/>
+   <xsd:element name="Party" type="PartyType"/>
+   <xsd:element name="Payload" type="PayloadType"/>
+   <xsd:element name="PayloadExternalReference" type="ExternalReferenceType"/>
+   <xsd:element name="RelevantExternalReference" type="ExternalReferenceType"/>
+   <xsd:element name="ToParty" type="PartyType"/>
+   <!-- ===== Type Definitions ===== -->
+   <!-- ===== Aggregate Business Information Entity Type Definitions ===== -->
+   <xsd:complexType name="ExternalReferenceType">
+      <xsd:annotation>
+         <xsd:documentation>
+            <ccts:Component>
+               <ccts:ComponentType>ABIE</ccts:ComponentType>
+               <ccts:DictionaryEntryName>External Reference. Details</ccts:DictionaryEntryName>
+               <ccts:Definition>A reference to a business case, document or other issues which are relevant to the handling of the envelope.</ccts:Definition>
+               <ccts:ObjectClass>External Reference</ccts:ObjectClass>
+            </ccts:Component>
+         </xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:element ref="cbc:ID" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>External Reference. Identifier</ccts:DictionaryEntryName>
+                     <ccts:Definition>Identifies the referenced object.</ccts:Definition>
+                     <ccts:Cardinality>1</ccts:Cardinality>
+                     <ccts:ObjectClass>External Reference</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+                     <ccts:DataType>Identifier. Type</ccts:DataType>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cbc:AvailabilityStartDateTime" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>External Reference. Availability Start Date Time. Date Time</ccts:DictionaryEntryName>
+                     <ccts:Definition>The start date and time when the information is available</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>External Reference</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Availability Start Date Time</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Date Time</ccts:RepresentationTerm>
+                     <ccts:DataType>Date Time. Type</ccts:DataType>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cbc:AvailabilityEndDateTime" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>External Reference. Availability End Date Time. Date Time</ccts:DictionaryEntryName>
+                     <ccts:Definition>The end date and time when the information is available</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>External Reference</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Availability End Date Time</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Date Time</ccts:RepresentationTerm>
+                     <ccts:DataType>Date Time. Type</ccts:DataType>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cbc:Login" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>External Reference. Login. Text</ccts:DictionaryEntryName>
+                     <ccts:Definition>Text describing any login details to access the information.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>External Reference</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Login</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
+                     <ccts:DataType>Text. Type</ccts:DataType>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cbc:Password" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>External Reference. Password. Text</ccts:DictionaryEntryName>
+                     <ccts:Definition>A password needed to access the information.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>External Reference</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Password</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
+                     <ccts:DataType>Text. Type</ccts:DataType>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="PartyType">
+      <xsd:annotation>
+         <xsd:documentation>
+            <ccts:Component>
+               <ccts:ComponentType>ABIE</ccts:ComponentType>
+               <ccts:DictionaryEntryName>Party. Details</ccts:DictionaryEntryName>
+               <ccts:Definition>The information about a party</ccts:Definition>
+               <ccts:ObjectClass>Party</ccts:ObjectClass>
+            </ccts:Component>
+         </xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:element ref="cbc:ID" minOccurs="1" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Party. Identifier</ccts:DictionaryEntryName>
+                     <ccts:Definition>An unambiguous identification of a party</ccts:Definition>
+                     <ccts:Cardinality>1..n</ccts:Cardinality>
+                     <ccts:ObjectClass>Party</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+                     <ccts:DataType>Identifier. Type</ccts:DataType>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="PayloadType">
+      <xsd:annotation>
+         <xsd:documentation>
+            <ccts:Component>
+               <ccts:ComponentType>ABIE</ccts:ComponentType>
+               <ccts:DictionaryEntryName>Payload. Details</ccts:DictionaryEntryName>
+               <ccts:Definition>The actual payload, such as an invoice, to be processed at next level.</ccts:Definition>
+               <ccts:ObjectClass>Payload</ccts:ObjectClass>
+            </ccts:Component>
+         </xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Payload. Identifier</ccts:DictionaryEntryName>
+                     <ccts:Definition>A unique identification of the payloads contained within the envelope.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Payload</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+                     <ccts:DataType>Identifier. Type</ccts:DataType>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cbc:DocumentTypeCode" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Payload. Document Type Code. Code</ccts:DictionaryEntryName>
+                     <ccts:Definition>This element identifies the type of the payload instance in the envelope.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Payload</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Document Type Code</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
+                     <ccts:DataType>Code. Type</ccts:DataType>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cbc:CustomizationID" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Payload. Customization Identifier. Identifier</ccts:DictionaryEntryName>
+                     <ccts:Definition>Identifies the customization that applies to the payload instance.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Payload</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Customization Identifier</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+                     <ccts:DataType>Identifier. Type</ccts:DataType>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cbc:ProfileID" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Payload. Profile Identifier. Identifier</ccts:DictionaryEntryName>
+                     <ccts:Definition>Identifies the profile that the payload instance is part of.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Payload</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Profile Identifier</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+                     <ccts:DataType>Identifier. Type</ccts:DataType>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cbc:ProfileExecutionID" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Payload. Profile Execution Identifier. Identifier</ccts:DictionaryEntryName>
+                     <ccts:Definition>Identifies the particular instance of an executing profile that the payload instance is part of.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Payload</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Profile Execution Identifier</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+                     <ccts:DataType>Identifier. Type</ccts:DataType>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cbc:HandlingServiceID" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Payload. Handling Service Identifier. Identifier</ccts:DictionaryEntryName>
+                     <ccts:Definition>Identifies the service that should process the payload instance.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Payload</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Handling Service Identifier</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+                     <ccts:DataType>Identifier. Type</ccts:DataType>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cbc:InstanceSyntaxID" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Payload. Instance Syntax Identifier. Identifier</ccts:DictionaryEntryName>
+                     <ccts:Definition>Identifies the syntax that the payload instance is expressed in.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Payload</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Instance Syntax Identifier</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+                     <ccts:DataType>Identifier. Type</ccts:DataType>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cbc:InstanceEncryptionIndicator" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Payload. Instance Encryption Indicator. Indicator</ccts:DictionaryEntryName>
+                     <ccts:Definition>Indicator to state whether the payload instance is encrypted or not.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Payload</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Instance Encryption Indicator</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Indicator</ccts:RepresentationTerm>
+                     <ccts:DataType>Indicator. Type</ccts:DataType>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cbc:InstanceEncryptionMethod" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Payload. Instance Encryption Method. Text</ccts:DictionaryEntryName>
+                     <ccts:Definition>Method used to encrypt the payload instance.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Payload</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Instance Encryption Method</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
+                     <ccts:DataType>Text. Type</ccts:DataType>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cbc:InstanceHashValue" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Payload. Instance Hash Value. Text</ccts:DictionaryEntryName>
+                     <ccts:Definition>Hash total of the unencrypted payload instance.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Payload</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Instance Hash Value</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
+                     <ccts:DataType>Text. Type</ccts:DataType>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cbc:InstanceHashAlgorithm" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Payload. Instance Hash Algorithm. Text</ccts:DictionaryEntryName>
+                     <ccts:Definition>Algorithm used to calculate the hash total of the unencrypted payload instance.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Payload</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Instance Hash Algorithm</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
+                     <ccts:DataType>Text. Type</ccts:DataType>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="eac:InstanceDecryptionInformationExternalReference"
+                      minOccurs="0"
+                      maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Payload. Instance Decryption Information_ External Reference. External Reference</ccts:DictionaryEntryName>
+                     <ccts:Definition>Decryption information that is available external to the envelope.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Payload</ccts:ObjectClass>
+                     <ccts:PropertyTermQualifier>Instance Decryption Information</ccts:PropertyTermQualifier>
+                     <ccts:PropertyTerm>External Reference</ccts:PropertyTerm>
+                     <ccts:AssociatedObjectClass>External Reference</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>External Reference</ccts:RepresentationTerm>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="eac:InstanceDecryptionKeyExternalReference"
+                      minOccurs="0"
+                      maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Payload. Instance Decryption Key_ External Reference. External Reference</ccts:DictionaryEntryName>
+                     <ccts:Definition>Decryption key data that is available external to the envelope.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Payload</ccts:ObjectClass>
+                     <ccts:PropertyTermQualifier>Instance Decryption Key</ccts:PropertyTermQualifier>
+                     <ccts:PropertyTerm>External Reference</ccts:PropertyTerm>
+                     <ccts:AssociatedObjectClass>External Reference</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>External Reference</ccts:RepresentationTerm>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="eac:RelevantExternalReference"
+                      minOccurs="0"
+                      maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Payload. Relevant_ External Reference. External Reference</ccts:DictionaryEntryName>
+                     <ccts:Definition>A reference to a business case, document or other issues which are relevant to the handling of the envelope.</ccts:Definition>
+                     <ccts:Cardinality>0..n</ccts:Cardinality>
+                     <ccts:ObjectClass>Payload</ccts:ObjectClass>
+                     <ccts:PropertyTermQualifier>Relevant</ccts:PropertyTermQualifier>
+                     <ccts:PropertyTerm>External Reference</ccts:PropertyTerm>
+                     <ccts:AssociatedObjectClass>External Reference</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>External Reference</ccts:RepresentationTerm>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="eac:PayloadExternalReference" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Payload. Payload_ External Reference. External Reference</ccts:DictionaryEntryName>
+                     <ccts:Definition>The reference to the payload when it is not included within the envelope.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Payload</ccts:ObjectClass>
+                     <ccts:PropertyTermQualifier>Payload</ccts:PropertyTermQualifier>
+                     <ccts:PropertyTerm>External Reference</ccts:PropertyTerm>
+                     <ccts:AssociatedObjectClass>External Reference</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>External Reference</ccts:RepresentationTerm>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element name="PayloadContent"
+                      minOccurs="0"
+                      maxOccurs="1"
+                      type="PayloadContentType">
+           <xsd:annotation>
+               <xsd:documentation>The content of the payload when it is included in the envelope.</xsd:documentation>
+           </xsd:annotation>
+         </xsd:element>
+        </xsd:sequence>
+   </xsd:complexType>
+</xsd:schema>
+<!-- ===== Copyright Notice ===== -->
+<!--
+  OASIS takes no position regarding the validity or scope of any 
+  intellectual property or other rights that might be claimed to pertain 
+  to the implementation or use of the technology described in this 
+  document or the extent to which any license under such rights 
+  might or might not be available; neither does it represent that it has 
+  made any effort to identify any such rights. Information on OASIS's 
+  procedures with respect to rights in OASIS specifications can be 
+  found at the OASIS website. Copies of claims of rights made 
+  available for publication and any assurances of licenses to be made 
+  available, or the result of an attempt made to obtain a general 
+  license or permission for the use of such proprietary rights by 
+  implementors or users of this specification, can be obtained from 
+  the OASIS Executive Director.
+
+  OASIS invites any interested party to bring to its attention any 
+  copyrights, patents or patent applications, or other proprietary 
+  rights which may cover technology that may be required to 
+  implement this specification. Please address the information to the 
+  OASIS Executive Director.
+  
+  This document and translations of it may be copied and furnished to 
+  others, and derivative works that comment on or otherwise explain 
+  it or assist in its implementation may be prepared, copied, 
+  published and distributed, in whole or in part, without restriction of 
+  any kind, provided that the above copyright notice and this 
+  paragraph are included on all such copies and derivative works. 
+  However, this document itself may not be modified in any way, 
+  such as by removing the copyright notice or references to OASIS, 
+  except as needed for the purpose of developing OASIS 
+  specifications, in which case the procedures for copyrights defined 
+  in the OASIS Intellectual Property Rights document must be 
+  followed, or as required to translate it into languages other than 
+  English. 
+
+  The limited permissions granted above are perpetual and will not be 
+  revoked by OASIS or its successors or assigns. 
+
+  This document and the information contained herein is provided on 
+  an "AS IS" basis and OASIS DISCLAIMS ALL WARRANTIES, 
+  EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY 
+  WARRANTY THAT THE USE OF THE INFORMATION HEREIN 
+  WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED 
+  WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A 
+  PARTICULAR PURPOSE.    
+-->
