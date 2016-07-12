@@ -20,6 +20,7 @@ import javax.annotation.Nonnull;
 import javax.annotation.concurrent.NotThreadSafe;
 
 import com.helger.bde.v10.BDE10EnvelopeType;
+import com.helger.bde.v11.BDE11EnvelopeType;
 import com.helger.jaxb.builder.JAXBReaderBuilder;
 
 /**
@@ -37,25 +38,6 @@ public class BDEReader <JAXBTYPE> extends JAXBReaderBuilder <JAXBTYPE, BDEReader
     super (eDocType, aImplClass);
   }
 
-  public BDEReader (@Nonnull final Class <JAXBTYPE> aClass)
-  {
-    this (BDEDocumentTypes.getDocumentTypeOfImplementationClass (aClass), aClass);
-  }
-
-  /**
-   * Create a new reader builder that is not typed, because only the document
-   * type enumeration value is available.
-   *
-   * @param eDocType
-   *        The SBDH document type to be read. May not be <code>null</code> .
-   * @return The new reader builder. Never <code>null</code>.
-   */
-  @Nonnull
-  public static BDEReader <?> createGeneric (@Nonnull final EBDEDocumentType eDocType)
-  {
-    return new BDEReader<> (eDocType, Object.class);
-  }
-
   /**
    * Create a reader builder for BDE10EnvelopeType.
    *
@@ -64,6 +46,17 @@ public class BDEReader <JAXBTYPE> extends JAXBReaderBuilder <JAXBTYPE, BDEReader
   @Nonnull
   public static BDEReader <BDE10EnvelopeType> envelope10 ()
   {
-    return new BDEReader<> (BDE10EnvelopeType.class);
+    return new BDEReader<> (EBDEDocumentType.BDE10, BDE10EnvelopeType.class);
+  }
+
+  /**
+   * Create a reader builder for BDE11EnvelopeType.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static BDEReader <BDE11EnvelopeType> envelope11 ()
+  {
+    return new BDEReader<> (EBDEDocumentType.BDE11, BDE11EnvelopeType.class);
   }
 }

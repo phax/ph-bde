@@ -20,6 +20,7 @@ import javax.annotation.Nonnull;
 import javax.annotation.concurrent.NotThreadSafe;
 
 import com.helger.bde.v10.BDE10EnvelopeType;
+import com.helger.bde.v11.BDE11EnvelopeType;
 import com.helger.jaxb.builder.JAXBWriterBuilder;
 import com.helger.xml.namespace.MapBasedNamespaceContext;
 
@@ -43,11 +44,6 @@ public class BDEWriter <JAXBTYPE> extends JAXBWriterBuilder <JAXBTYPE, BDEWriter
     setNamespaceContext (aNSContext);
   }
 
-  public BDEWriter (@Nonnull final Class <JAXBTYPE> aClass)
-  {
-    this (BDEDocumentTypes.getDocumentTypeOfImplementationClass (aClass));
-  }
-
   /**
    * Create a writer builder for BDE10EnvelopeType.
    *
@@ -57,5 +53,16 @@ public class BDEWriter <JAXBTYPE> extends JAXBWriterBuilder <JAXBTYPE, BDEWriter
   public static BDEWriter <BDE10EnvelopeType> envelope10 ()
   {
     return new BDEWriter<> (EBDEDocumentType.BDE10);
+  }
+
+  /**
+   * Create a writer builder for BDE11EnvelopeType.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static BDEWriter <BDE11EnvelopeType> envelope11 ()
+  {
+    return new BDEWriter<> (EBDEDocumentType.BDE11);
   }
 }

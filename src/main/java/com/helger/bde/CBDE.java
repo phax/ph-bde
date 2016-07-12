@@ -47,6 +47,17 @@ public final class CBDE
   /** Namespace URI for BDE 1.0 */
   public static final String BDE10_NS = "http://docs.oasis-open.org/bdxr/ns/bde/1.0/Envelope";
 
+  /**
+   * XML Schema resources for BDE 1.1 - since include is used, the other schemas
+   * must not be specified.
+   */
+  public static final String BDE11_XSD_PATH = "/schemas/bde11/BDE-Envelope-1.1.xsd";
+  /**
+   * XML Schema resources for BDE 1.0 - since include is used, the other schemas
+   * must not be specified.
+   */
+  public static final List <? extends IReadableResource> BDE11_XSDS = CollectionHelper.makeUnmodifiable (new ClassPathResource (BDE11_XSD_PATH));
+
   @PresentForCodeCoverage
   private static final CBDE s_aInstance = new CBDE ();
 

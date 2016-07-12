@@ -14,47 +14,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.helger.bde.builder;
+package com.helger.bde;
 
 import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
 
 import java.io.File;
 
 import org.junit.Test;
 
-import com.helger.bde.v10.BDE10EnvelopeType;
-import com.helger.bde.v11.BDE11EnvelopeType;
 import com.helger.commons.io.file.iterate.FileSystemIterator;
 
 /**
- * Test class for class {@link BDEValidator}.
+ * Test class for class {@link BDE11Marshaller}.
  *
  * @author Philip Helger
  */
-public final class BDEValidatorTest
+public final class BDE11MarshallerTest
 {
   @Test
-  public void testBDE10 ()
+  public void testReadAll ()
   {
-    for (final File aFile : new FileSystemIterator ("src/test/resources/examples/bde10/good"))
-      if (aFile.isFile ())
-      {
-        final BDE10EnvelopeType aDoc = BDEReader.envelope10 ().read (aFile);
-        assertNotNull (aFile.getAbsolutePath (), aDoc);
-        assertTrue (aFile.getAbsolutePath (), BDEValidator.envelope10 ().isValid (aDoc));
-      }
-  }
-
-  @Test
-  public void testBDE11 ()
-  {
+    final BDE11Marshaller aMarshaller = new BDE11Marshaller ();
     for (final File aFile : new FileSystemIterator ("src/test/resources/examples/bde11/good"))
       if (aFile.isFile ())
-      {
-        final BDE11EnvelopeType aDoc = BDEReader.envelope11 ().read (aFile);
-        assertNotNull (aFile.getAbsolutePath (), aDoc);
-        assertTrue (aFile.getAbsolutePath (), BDEValidator.envelope11 ().isValid (aDoc));
-      }
+        assertNotNull (aFile.getAbsolutePath (), aMarshaller.read (aFile));
   }
 }

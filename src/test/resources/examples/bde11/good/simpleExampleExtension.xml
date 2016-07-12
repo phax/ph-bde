@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope xmlns="http://docs.oasis-open.org/bdxr/ns/bde/1.0/Envelope"
+  xmlns:ebc="http://docs.oasis-open.org/bdxr/ns/bde/1.0/BasicComponents"
+  xmlns:eac="http://docs.oasis-open.org/bdxr/ns/bde/1.0/AggregateComponents"
+  xmlns:ext="http://docs.oasis-open.org/bdxr/ns/bde/1.0/ExtensionComponents">
+  <ext:BDEExtensions>
+    <ext:BDEExtension>
+      <ext:ExtensionContent>
+        <myExtensionHere>
+          <myOtherStuff>Stuff</myOtherStuff> 
+        </myExtensionHere>
+      </ext:ExtensionContent>
+    </ext:BDEExtension>
+  </ext:BDEExtensions>
+  <ebc:ID>123</ebc:ID>
+  <ebc:CreationDateTime>2015-02-08T20:34:00-04:00</ebc:CreationDateTime>
+  <eac:FromParty>
+    <ebc:ID>A</ebc:ID>
+  </eac:FromParty>
+  <eac:ToParty>
+    <ebc:ID>B</ebc:ID>
+  </eac:ToParty>
+  <eac:Payload>
+    <eac:PayloadContent>
+      <myDocumentHere>
+        <myElement>My Content</myElement>
+        <myElement>My Content</myElement>
+        <myElement>My Content</myElement>
+      </myDocumentHere>
+    </eac:PayloadContent>
+  </eac:Payload>
+</Envelope>

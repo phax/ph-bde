@@ -22,6 +22,7 @@ import javax.xml.validation.Schema;
 
 import com.helger.bde.CBDE;
 import com.helger.bde.v10.BDE10EnvelopeType;
+import com.helger.bde.v11.BDE11EnvelopeType;
 import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.annotation.ReturnsMutableCopy;
 import com.helger.commons.collection.CollectionHelper;
@@ -37,7 +38,8 @@ import com.helger.jaxb.builder.JAXBDocumentType;
  */
 public enum EBDEDocumentType implements IJAXBDocumentType
 {
-  BDE10 (BDE10EnvelopeType.class, CBDE.BDE10_XSD_PATH);
+  BDE10 (BDE10EnvelopeType.class, CBDE.BDE10_XSD_PATH),
+  BDE11 (BDE11EnvelopeType.class, CBDE.BDE11_XSD_PATH);
 
   private final JAXBDocumentType m_aDocType;
 

@@ -24,6 +24,7 @@ import java.io.File;
 import org.junit.Test;
 
 import com.helger.bde.v10.BDE10EnvelopeType;
+import com.helger.bde.v11.BDE11EnvelopeType;
 import com.helger.commons.io.file.iterate.FileSystemIterator;
 import com.helger.commons.mock.CommonsTestHelper;
 
@@ -57,6 +58,33 @@ public final class BDEReaderTest
       if (aFile.isFile ())
       {
         final BDE10EnvelopeType aDoc = aReader.read (aFile);
+        assertNull (aFile.getAbsolutePath (), aDoc);
+      }
+  }
+
+  @Test
+  public void testBDE11 ()
+  {
+    final BDEReader <BDE11EnvelopeType> aReader = BDEReader.envelope11 ();
+    final BDEWriter <BDE11EnvelopeType> aWriter = BDEWriter.envelope11 ();
+    for (final File aFile : new FileSystemIterator ("src/test/resources/examples/bde11/good"))
+      if (aFile.isFile ())
+      {
+        final BDE11EnvelopeType aDoc = aReader.read (aFile);
+        assertNotNull (aFile.getAbsolutePath (), aDoc);
+        final String sDoc = aWriter.getAsString (aDoc);
+        assertNotNull (aFile.getAbsolutePath (), sDoc);
+        final BDE11EnvelopeType aDoc2 = aReader.read (sDoc);
+        assertNotNull (aFile.getAbsolutePath (), aDoc2);
+
+        CommonsTestHelper.testEqualsImplementationWithEqualContentObject (aDoc, aDoc2);
+        CommonsTestHelper.testEqualsImplementationWithEqualContentObject (aDoc, aDoc.clone ());
+      }
+
+    for (final File aFile : new FileSystemIterator ("src/test/resources/examples/bde11/bad"))
+      if (aFile.isFile ())
+      {
+        final BDE11EnvelopeType aDoc = aReader.read (aFile);
         assertNull (aFile.getAbsolutePath (), aDoc);
       }
   }

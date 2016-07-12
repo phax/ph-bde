@@ -20,6 +20,7 @@ import javax.annotation.Nonnull;
 import javax.annotation.concurrent.NotThreadSafe;
 
 import com.helger.bde.v10.BDE10EnvelopeType;
+import com.helger.bde.v11.BDE11EnvelopeType;
 import com.helger.jaxb.builder.JAXBValidationBuilder;
 
 /**
@@ -37,11 +38,6 @@ public class BDEValidator <JAXBTYPE> extends JAXBValidationBuilder <JAXBTYPE, BD
     super (eDocType);
   }
 
-  public BDEValidator (@Nonnull final Class <JAXBTYPE> aClass)
-  {
-    this (BDEDocumentTypes.getDocumentTypeOfImplementationClass (aClass));
-  }
-
   /**
    * Create a validator builder for BDE10EnvelopeType.
    *
@@ -51,5 +47,16 @@ public class BDEValidator <JAXBTYPE> extends JAXBValidationBuilder <JAXBTYPE, BD
   public static BDEValidator <BDE10EnvelopeType> envelope10 ()
   {
     return new BDEValidator<> (EBDEDocumentType.BDE10);
+  }
+
+  /**
+   * Create a validator builder for BDE11EnvelopeType.
+   *
+   * @return The builder and never <code>null</code>
+   */
+  @Nonnull
+  public static BDEValidator <BDE11EnvelopeType> envelope11 ()
+  {
+    return new BDEValidator<> (EBDEDocumentType.BDE11);
   }
 }

@@ -22,9 +22,8 @@ import java.io.File;
 
 import org.junit.Test;
 
-import com.helger.bde.builder.BDEReader;
-import com.helger.bde.builder.BDEWriter;
 import com.helger.bde.v10.BDE10EnvelopeType;
+import com.helger.bde.v11.BDE11EnvelopeType;
 import com.helger.commons.io.file.iterate.FileSystemIterator;
 
 /**
@@ -37,12 +36,24 @@ public final class BDEWriterTest
   @Test
   public void testBDE10 ()
   {
-    for (final File aFile : new FileSystemIterator ("src/test/resources/examples/bde10"))
+    for (final File aFile : new FileSystemIterator ("src/test/resources/examples/bde10/good"))
       if (aFile.isFile ())
       {
         final BDE10EnvelopeType aDoc = BDEReader.envelope10 ().read (aFile);
         assertNotNull (aFile.getAbsolutePath (), aDoc);
         assertNotNull (aFile.getAbsolutePath (), BDEWriter.envelope10 ().getAsDocument (aDoc));
+      }
+  }
+
+  @Test
+  public void testBDE11 ()
+  {
+    for (final File aFile : new FileSystemIterator ("src/test/resources/examples/bde11/good"))
+      if (aFile.isFile ())
+      {
+        final BDE11EnvelopeType aDoc = BDEReader.envelope11 ().read (aFile);
+        assertNotNull (aFile.getAbsolutePath (), aDoc);
+        assertNotNull (aFile.getAbsolutePath (), BDEWriter.envelope11 ().getAsDocument (aDoc));
       }
   }
 }

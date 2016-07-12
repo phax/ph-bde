@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope xmlns="http://docs.oasis-open.org/bdxr/ns/bde/1.0/Envelope"
+  xmlns:ebc="http://docs.oasis-open.org/bdxr/ns/bde/1.0/BasicComponents"
+  xmlns:eac="http://docs.oasis-open.org/bdxr/ns/bde/1.0/AggregateComponents">
+  <ebc:ID>123</ebc:ID>
+  <ebc:CreationDateTime>2016-07-07T12:05:00-05:00</ebc:CreationDateTime>
+  <eac:FromParty>
+    <ebc:ID>sender</ebc:ID>
+  </eac:FromParty>
+  <eac:ToParty>
+    <ebc:ID>recipient1</ebc:ID>
+  </eac:ToParty>
+  <eac:ToParty>
+    <ebc:ID>recipient2</ebc:ID>
+  </eac:ToParty>
+  <eac:Payload>
+    <ebc:InstanceEncryptionIndicator>true</ebc:InstanceEncryptionIndicator>
+    <ebc:InstanceEncryptionMethod>http://www.w3.org/2001/04/xmlenc#</ebc:InstanceEncryptionMethod>
+    <eac:PayloadContent>
+      <EncryptedData Type="http://www.w3.org/2001/04/xmlenc#Content" xmlns="http://www.w3.org/2001/04/xmlenc#">
+        <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+        <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+          <KeyName>myexamplekey</KeyName>
+          <EncryptedKey Recipient="recipient1" xmlns="http://www.w3.org/2001/04/xmlenc#">
+            <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+            <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+              <KeyName>recipient1</KeyName>
+            </KeyInfo>
+            <CipherData>
+              <CipherValue>4nYpdjuLkx1cv+r0X1b/avzC2Ntw1b4813xlJ4KI6rb2cTfypo/V2nhcdcm6qZAnEg0HDztHN/Ugd9nRXYJEzmeEnYQzjD0msJayTc+4kRxTve0aw0z3RdnKr71nToJX5Tx6DurFsCp1RZ/7LEr14oAsbzS4N4+1ZAyak8YUf96=</CipherValue>
+            </CipherData>
+            <CarriedKeyName>myexamplekey</CarriedKeyName>
+          </EncryptedKey>
+          <EncryptedKey Recipient="recipient2" xmlns="http://www.w3.org/2001/04/xmlenc#">
+            <EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+            <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+              <KeyName>recipient2</KeyName>
+            </KeyInfo>
+            <CipherData>
+              <CipherValue>fVgMilnz7dJbPtG7TNn52XUy+ANCIVdG7kiVpnZS4ia8Lve2ozZG/HltGrjmYBkN9cURRzlJ2ufk3MYKwoAkUE8hS3dvQTdltuysTrMJ227zHnUFsX/av0vqvHw7KkaqLZoOcJslEuLh1RHW+v78RmwM1ogDfqEMv4KrZY9lwUc=</CipherValue>
+            </CipherData>
+            <CarriedKeyName>myexamplekey</CarriedKeyName>
+          </EncryptedKey>
+        </KeyInfo>
+        <CipherData>
+          <CipherValue>afJGPctJo/5O6VW3mIzA5VPLIAe+SBzHQmHIEllkbk7CD51X4MeY72Y1q+I1iOGbSxcxUm9lwLco1uwiG4Fsav==</CipherValue>
+        </CipherData>
+      </EncryptedData>
+    </eac:PayloadContent>
+  </eac:Payload>
+</Envelope>

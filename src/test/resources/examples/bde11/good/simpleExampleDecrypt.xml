@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope xmlns="http://docs.oasis-open.org/bdxr/ns/bde/1.0/Envelope"
+  xmlns:ebc="http://docs.oasis-open.org/bdxr/ns/bde/1.0/BasicComponents"
+  xmlns:eac="http://docs.oasis-open.org/bdxr/ns/bde/1.0/AggregateComponents">
+  <ebc:ID>123</ebc:ID>
+  <ebc:CreationDateTime>2015-02-08T20:34:00-04:00</ebc:CreationDateTime>
+  <eac:FromParty>
+    <ebc:ID>A</ebc:ID>
+  </eac:FromParty>
+  <eac:ToParty>
+    <ebc:ID>B</ebc:ID>
+  </eac:ToParty>
+  <eac:Payload>
+    <eac:PayloadContent>
+      <myDocumentHere>
+        <myElement>My Content</myElement>
+        <myElement>My Content</myElement>
+        <myElement>My Content</myElement>
+      </myDocumentHere>
+    </eac:PayloadContent>
+  </eac:Payload>
+  <eac:Payload>
+    <ebc:InstanceEncryptionIndicator>true</ebc:InstanceEncryptionIndicator>
+    <ebc:InstanceEncryptionMethod>demonstration</ebc:InstanceEncryptionMethod>
+    <!-- Invalid
+    <eac:InstanceDecryptionExternalReference>
+      <ebc:ID>http://public/information/decription.html</ebc:ID>
+      <ebc:AvailabilityStartDateTime>2016-01-01T00:00:00+02:00</ebc:AvailabilityStartDateTime>
+    </eac:InstanceDecryptionExternalReference>
+    -->
+    <eac:RelevantExternalReference>
+      <ebc:ID>http://public/information/decription.html</ebc:ID>
+    </eac:RelevantExternalReference>
+    <eac:PayloadContent>
+a;ldskfa;ldfkja;sdlfkja;slkdfja;lsdkfja;sldkfjads;lkfjas;ldfja;lfjk
+;alsdkfja;dfkja;sdlkfjas;ldfkja;lsdkfjas;ldkfj;asdfja;kdfj;alksdfj;
+a;lsdkfja;dksfja;ldsfkjasd;lkfja;ldskfja;sdfkja;lsdkfj;lasdkfj;lkaj
+a;sdlfkja;sdlfkja;sdkfja;sldkfja;lsdkjf;alsdkjfl;aksdjf;lasjad;sflk
+    </eac:PayloadContent>
+  </eac:Payload>
+  <eac:Payload>
+    <eac:PayloadContent>
+      <myOtherDocumentHere>
+        <myOtherElement>My Content</myOtherElement>
+        <myOtherElement>My Content</myOtherElement>
+        <myOtherElement>My Content</myOtherElement>
+      </myOtherDocumentHere>
+    </eac:PayloadContent>
+  </eac:Payload>
+</Envelope>
