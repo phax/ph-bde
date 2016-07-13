@@ -22,15 +22,10 @@
   <eac:Payload>
     <ebc:InstanceEncryptionIndicator>true</ebc:InstanceEncryptionIndicator>
     <ebc:InstanceEncryptionMethod>demonstration</ebc:InstanceEncryptionMethod>
-    <!-- Invalid
-    <eac:InstanceDecryptionExternalReference>
+    <eac:InstanceDecryptionInformationExternalReference>
       <ebc:ID>http://public/information/decription.html</ebc:ID>
       <ebc:AvailabilityStartDateTime>2016-01-01T00:00:00+02:00</ebc:AvailabilityStartDateTime>
-    </eac:InstanceDecryptionExternalReference>
-    -->
-    <eac:RelevantExternalReference>
-      <ebc:ID>http://public/information/decription.html</ebc:ID>
-    </eac:RelevantExternalReference>
+    </eac:InstanceDecryptionInformationExternalReference>
     <eac:PayloadContent>
 a;ldskfa;ldfkja;sdlfkja;slkdfja;lsdkfja;sldkfjads;lkfjas;ldfja;lfjk
 ;alsdkfja;dfkja;sdlkfjas;ldfkja;lsdkfjas;ldkfj;asdfja;kdfj;alksdfj;
