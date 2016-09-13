@@ -25,11 +25,11 @@ import com.helger.jaxb.builder.JAXBWriterBuilder;
 import com.helger.xml.namespace.MapBasedNamespaceContext;
 
 /**
- * A writer builder for SBDH documents.
+ * A writer builder for BDE documents.
  *
  * @author Philip Helger
  * @param <JAXBTYPE>
- *        The SBDH implementation class to be read
+ *        The BDE implementation class to be read
  */
 @NotThreadSafe
 public class BDEWriter <JAXBTYPE> extends JAXBWriterBuilder <JAXBTYPE, BDEWriter <JAXBTYPE>>

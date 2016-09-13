@@ -24,11 +24,11 @@ import com.helger.bde.v11.BDE11EnvelopeType;
 import com.helger.jaxb.builder.JAXBValidationBuilder;
 
 /**
- * A writer builder for SBDH documents.
+ * A writer builder for BDE documents.
  *
  * @author Philip Helger
  * @param <JAXBTYPE>
- *        The SBDH implementation class to be read
+ *        The BDE implementation class to be read
  */
 @NotThreadSafe
 public class BDEValidator <JAXBTYPE> extends JAXBValidationBuilder <JAXBTYPE, BDEValidator <JAXBTYPE>>
