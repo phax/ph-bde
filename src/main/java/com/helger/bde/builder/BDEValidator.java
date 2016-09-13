@@ -24,7 +24,7 @@ import com.helger.bde.v11.BDE11EnvelopeType;
 import com.helger.jaxb.builder.JAXBValidationBuilder;
 
 /**
- * A writer builder for BDE documents.
+ * A validator builder for BDE documents.
  *
  * @author Philip Helger
  * @param <JAXBTYPE>
