@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Business Document Envelope (BDE) 1.1 CSD02
-                     http://docs.oasis-open.org/bdxr/bdx-bde/v1.1/csd02/
-  Release Date:      20 July 2015
+  Library:           OASIS Business Document Envelope (BDE) 1.1 CSPRD02
+                     http://docs.oasis-open.org/bdxr/bdx-bde/v1.1/csprd02/
+  Release Date:      09 November 2016
   Module:            xsd/common/BDE-CommonBasicComponents-1.1.xsd
-  Generated on:      2016-07-07 14:55z
+  Generated on:      2016-11-09 18:23z
   Copyright (c) OASIS Open 2015. All Rights Reserved.
 -->
 <xsd:schema xmlns="http://docs.oasis-open.org/bdxr/ns/bde/1.0/BasicComponents"
