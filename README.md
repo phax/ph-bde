@@ -1,5 +1,7 @@
 #ph-bde
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/7b6deab23df3422fba492a85ecb72720)](https://www.codacy.com/app/philip/ph-bde?utm_source=github.com&utm_medium=referral&utm_content=phax/ph-bde&utm_campaign=badger)
+
 OASIS BDE (Business Document Envelope) Java wrapper library.
 It supports easily reading and writing of BDE 1.0 and BDE 1.1 documents.
 It allows conversion between Java domain objects and XML representations.
