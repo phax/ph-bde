@@ -1,4 +1,4 @@
-#ph-bde
+# ph-bde
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/7b6deab23df3422fba492a85ecb72720)](https://www.codacy.com/app/philip/ph-bde?utm_source=github.com&utm_medium=referral&utm_content=phax/ph-bde&utm_campaign=badger)
 
@@ -10,7 +10,7 @@ It is licensed under Apache 2.0 license.
 
 It requires at least Java 8 to be used.
 
-#Maven usage
+# Maven usage
 Add the following to your pom.xml to use this artifact:
 ```
 <dependency>
