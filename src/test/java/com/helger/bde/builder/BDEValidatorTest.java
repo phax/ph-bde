@@ -25,7 +25,7 @@ import org.junit.Test;
 
 import com.helger.bde.v10.BDE10EnvelopeType;
 import com.helger.bde.v11.BDE11EnvelopeType;
-import com.helger.commons.io.file.iterate.FileSystemIterator;
+import com.helger.commons.io.file.FileSystemIterator;
 
 /**
  * Test class for class {@link BDEValidator}.

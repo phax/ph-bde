@@ -10,6 +10,12 @@ It is licensed under Apache 2.0 license.
 
 It requires at least Java 8 to be used.
 
+# News and noteworthy
+  * v2.0.0 - work in progress
+    * Updated to ph-commons 9.0.0
+  * v1.0.0 - 2016-07-15
+    * Initial version
+
 # Maven usage
 Add the following to your pom.xml to use this artifact:
 ```
