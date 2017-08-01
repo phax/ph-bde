@@ -40,7 +40,7 @@ public class BDEWriter <JAXBTYPE> extends JAXBWriterBuilder <JAXBTYPE, BDEWriter
 
     // Create a special namespace context for the passed document type
     final MapBasedNamespaceContext aNSContext = new MapBasedNamespaceContext ();
-    aNSContext.setDefaultNamespaceURI (m_aDocType.getNamespaceURI ());
+    aNSContext.addDefaultNamespaceURI (m_aDocType.getNamespaceURI ());
     setNamespaceContext (aNSContext);
   }
 
