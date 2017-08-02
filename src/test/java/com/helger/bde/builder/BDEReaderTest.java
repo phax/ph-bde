@@ -48,7 +48,7 @@ public final class BDEReaderTest
         final String sDoc = aWriter.getAsString (aDoc);
         assertNotNull (aFile.getAbsolutePath (), sDoc);
         final BDE10EnvelopeType aDoc2 = aReader.read (sDoc);
-        assertNotNull (aFile.getAbsolutePath (), aDoc2);
+        assertNotNull (aFile.getAbsolutePath () + "\n" + sDoc, aDoc2);
 
         CommonsTestHelper.testEqualsImplementationWithEqualContentObject (aDoc, aDoc2);
         CommonsTestHelper.testEqualsImplementationWithEqualContentObject (aDoc, aDoc.clone ());
