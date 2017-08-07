@@ -20,12 +20,16 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 
 import java.io.File;
+import java.nio.charset.Charset;
 
 import org.junit.Test;
 
 import com.helger.bde.v10.BDE10EnvelopeType;
 import com.helger.bde.v11.BDE11EnvelopeType;
+import com.helger.commons.charset.EUnicodeBOM;
+import com.helger.commons.collection.ArrayHelper;
 import com.helger.commons.io.file.FileSystemIterator;
+import com.helger.commons.io.streamprovider.ByteArrayInputStreamProvider;
 import com.helger.commons.mock.CommonsTestHelper;
 
 /**
@@ -36,7 +40,7 @@ import com.helger.commons.mock.CommonsTestHelper;
 public final class BDEReaderTest
 {
   @Test
-  public void testBDE10 ()
+  public void testBDE10Good ()
   {
     final BDEReader <BDE10EnvelopeType> aReader = BDEReader.envelope10 ();
     final BDEWriter <BDE10EnvelopeType> aWriter = BDEWriter.envelope10 ();
@@ -47,13 +51,26 @@ public final class BDEReaderTest
         assertNotNull (aFile.getAbsolutePath (), aDoc);
         final String sDoc = aWriter.getAsString (aDoc);
         assertNotNull (aFile.getAbsolutePath (), sDoc);
-        final BDE10EnvelopeType aDoc2 = aReader.read (sDoc);
-        assertNotNull (aFile.getAbsolutePath () + "\n" + sDoc, aDoc2);
+        for (final EUnicodeBOM eBOM : EUnicodeBOM.values ())
+        {
+          final Charset aDeterminedCharset = eBOM.getCharset ();
+          if (aDeterminedCharset != null)
+          {
+            final BDE10EnvelopeType aDoc2 = aReader.read (new ByteArrayInputStreamProvider (ArrayHelper.getConcatenated (eBOM.getAllBytes (),
+                                                                                                                         sDoc.getBytes (aDeterminedCharset))));
+            assertNotNull (aFile.getAbsolutePath () + "\n" + sDoc, aDoc2);
+            CommonsTestHelper.testEqualsImplementationWithEqualContentObject (aDoc, aDoc2);
+          }
+        }
 
-        CommonsTestHelper.testEqualsImplementationWithEqualContentObject (aDoc, aDoc2);
         CommonsTestHelper.testEqualsImplementationWithEqualContentObject (aDoc, aDoc.clone ());
       }
+  }
 
+  @Test
+  public void testBDE10Bad ()
+  {
+    final BDEReader <BDE10EnvelopeType> aReader = BDEReader.envelope10 ();
     for (final File aFile : new FileSystemIterator ("src/test/resources/examples/bde10/bad"))
       if (aFile.isFile ())
       {
@@ -63,7 +80,7 @@ public final class BDEReaderTest
   }
 
   @Test
-  public void testBDE11 ()
+  public void testBDE11Good ()
   {
     final BDEReader <BDE11EnvelopeType> aReader = BDEReader.envelope11 ();
     final BDEWriter <BDE11EnvelopeType> aWriter = BDEWriter.envelope11 ();
@@ -80,6 +97,12 @@ public final class BDEReaderTest
         CommonsTestHelper.testEqualsImplementationWithEqualContentObject (aDoc, aDoc2);
         CommonsTestHelper.testEqualsImplementationWithEqualContentObject (aDoc, aDoc.clone ());
       }
+  }
+
+  @Test
+  public void testBDE11Bad ()
+  {
+    final BDEReader <BDE11EnvelopeType> aReader = BDEReader.envelope11 ();
 
     for (final File aFile : new FileSystemIterator ("src/test/resources/examples/bde11/bad"))
       if (aFile.isFile ())
