@@ -18,15 +18,15 @@ package com.helger.bde;
 
 import com.helger.bde.v11.BDE11EnvelopeType;
 import com.helger.bde.v11.ObjectFactory;
-import com.helger.jaxb.AbstractJAXBMarshaller;
+import com.helger.jaxb.GenericJAXBMarshaller;
 
 /**
  * This is the reader and writer for BDE 1.1 documents. This class may be
- * derived to override protected methods from {@link AbstractJAXBMarshaller}.
+ * derived to override protected methods from {@link GenericJAXBMarshaller}.
  *
  * @author Philip Helger
  */
-public class BDE11Marshaller extends AbstractJAXBMarshaller <BDE11EnvelopeType>
+public class BDE11Marshaller extends GenericJAXBMarshaller <BDE11EnvelopeType>
 {
   public BDE11Marshaller ()
   {

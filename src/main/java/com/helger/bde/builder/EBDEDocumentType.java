@@ -25,7 +25,7 @@ import com.helger.bde.v10.BDE10EnvelopeType;
 import com.helger.bde.v11.BDE11EnvelopeType;
 import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.annotation.ReturnsMutableCopy;
-import com.helger.commons.collection.CollectionHelper;
+import com.helger.commons.collection.impl.CommonsArrayList;
 import com.helger.commons.collection.impl.ICommonsList;
 import com.helger.commons.string.StringHelper;
 import com.helger.jaxb.builder.IJAXBDocumentType;
@@ -46,7 +46,7 @@ public enum EBDEDocumentType implements IJAXBDocumentType
   private EBDEDocumentType (@Nonnull final Class <?> aClass, @Nonnull final String sXSDPath)
   {
     m_aDocType = new JAXBDocumentType (aClass,
-                                       CollectionHelper.newList (sXSDPath),
+                                       new CommonsArrayList <> (sXSDPath),
                                        x -> StringHelper.trimEnd (x, "Type"));
   }
 
