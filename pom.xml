@@ -136,6 +136,7 @@
             <exclude>src/test/resources/examples/**</exclude>
             <exclude>**/LICENSE</exclude>
             <exclude>**/NOTICE</exclude>
+            <exclude>**/*.txt</exclude>
           </excludes>
         </configuration>
       </plugin>
