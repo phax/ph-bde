@@ -122,6 +122,7 @@
         <extensions>true</extensions>
         <configuration>
           <instructions>
+            <Automatic-Module-Name>com.helger.bde</Automatic-Module-Name>
             <Export-Package>com.helger.bde.*</Export-Package>
             <Import-Package>!javax.annotation.*,*</Import-Package>
           </instructions>
