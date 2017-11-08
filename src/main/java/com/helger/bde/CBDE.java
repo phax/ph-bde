@@ -18,6 +18,7 @@ package com.helger.bde;
 
 import java.util.List;
 
+import javax.annotation.Nonnull;
 import javax.annotation.concurrent.Immutable;
 
 import com.helger.commons.annotation.CodingStyleguideUnaware;
@@ -33,6 +34,12 @@ import com.helger.commons.io.resource.ClassPathResource;
 @Immutable
 public final class CBDE
 {
+  @Nonnull
+  private static ClassLoader _getCL ()
+  {
+    return CBDE.class.getClassLoader ();
+  }
+
   /**
    * XML Schema resources for BDE 1.0 - since include is used, the other schemas
    * must not be specified.
@@ -45,7 +52,7 @@ public final class CBDE
    */
   @CodingStyleguideUnaware
   public static final List <ClassPathResource> BDE10_XSDS = new CommonsArrayList <> (new ClassPathResource (BDE10_XSD_PATH,
-                                                                                                            CBDE.class.getClassLoader ())).getAsUnmodifiable ();
+                                                                                                            _getCL ())).getAsUnmodifiable ();
 
   /** Namespace URI for BDE 1.0 */
   public static final String BDE10_NS = "http://docs.oasis-open.org/bdxr/ns/bde/1.0/Envelope";
@@ -62,7 +69,7 @@ public final class CBDE
    */
   @CodingStyleguideUnaware
   public static final List <ClassPathResource> BDE11_XSDS = new CommonsArrayList <> (new ClassPathResource (BDE11_XSD_PATH,
-                                                                                                            CBDE.class.getClassLoader ())).getAsUnmodifiable ();
+                                                                                                            _getCL ())).getAsUnmodifiable ();
 
   @PresentForCodeCoverage
   private static final CBDE s_aInstance = new CBDE ();
