@@ -91,6 +91,7 @@
       <groupId>com.helger</groupId>
       <artifactId>ph-xsds-xmldsig11</artifactId>
     </dependency>
+    <!-- XSDs present but unused
     <dependency>
       <groupId>com.helger</groupId>
       <artifactId>ph-xsds-xades132</artifactId>
@@ -99,6 +100,7 @@
       <groupId>com.helger</groupId>
       <artifactId>ph-xsds-xades141</artifactId>
     </dependency>
+     -->
     <dependency>
       <groupId>com.helger</groupId>
       <artifactId>ph-xsds-ccts-cct-schemamodule</artifactId>
