@@ -16,6 +16,8 @@
  */
 package com.helger.bde;
 
+import javax.annotation.concurrent.NotThreadSafe;
+
 import com.helger.bde.v11.BDE11EnvelopeType;
 import com.helger.bde.v11.ObjectFactory;
 import com.helger.jaxb.GenericJAXBMarshaller;
@@ -26,6 +28,7 @@ import com.helger.jaxb.GenericJAXBMarshaller;
  *
  * @author Philip Helger
  */
+@NotThreadSafe
 public class BDE11Marshaller extends GenericJAXBMarshaller <BDE11EnvelopeType>
 {
   public BDE11Marshaller ()

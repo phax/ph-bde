@@ -38,6 +38,7 @@ public final class CBDE
    * must not be specified.
    */
   public static final String BDE10_XSD_PATH = "/schemas/bde10/BDE-Envelope-1.0.xsd";
+
   /**
    * XML Schema resources for BDE 1.0 - since include is used, the other schemas
    * must not be specified.
@@ -54,6 +55,7 @@ public final class CBDE
    * must not be specified.
    */
   public static final String BDE11_XSD_PATH = "/schemas/bde11/BDE-Envelope-1.1.xsd";
+
   /**
    * XML Schema resources for BDE 1.0 - since include is used, the other schemas
    * must not be specified.
