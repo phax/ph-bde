@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Business Document Envelope (BDE) 1.1 CSPRD02
-                     http://docs.oasis-open.org/bdxr/bdx-bde/v1.1/csprd02/
-  Release Date:      09 November 2016
+     Business Document Envelope Version 1.1
+     Committee Specification 01
+     05 December 2016
+     Copyright (c) OASIS Open 2016. All Rights Reserved.
+     Source: http://docs.oasis-open.org/bdxr/bdx-bde/v1.1/cs01/xsd/
+     Latest version of narrative specification: http://docs.oasis-open.org/bdxr/bdx-bde/v1.1/bdx-bde-v1.1.html
+     TC IPR Statement: https://www.oasis-open.org/committees/bdxr/ipr.php     
+-->
+<!--
+  Library:           OASIS Business Document Envelope (BDE) 1.1 CS01
+                     http://docs.oasis-open.org/bdxr/bdx-bde/v1.1/cs01/
+  Release Date:      05 December 2016
   Module:            xsd/common/BDE-CommonAggregateComponents-1.1.xsd
-  Generated on:      2016-11-09 18:23z
-  Copyright (c) OASIS Open 2015. All Rights Reserved.
+  Generated on:      2016-12-06 15:23z
 -->
 <xsd:schema xmlns="http://docs.oasis-open.org/bdxr/ns/bde/1.0/AggregateComponents"
             xmlns:eac="http://docs.oasis-open.org/bdxr/ns/bde/1.0/AggregateComponents"

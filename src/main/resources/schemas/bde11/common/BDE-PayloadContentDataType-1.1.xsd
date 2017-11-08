@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
+     Business Document Envelope Version 1.1
+     Committee Specification 01
+     05 December 2016
+     Copyright (c) OASIS Open 2016. All Rights Reserved.
+     Source: http://docs.oasis-open.org/bdxr/bdx-bde/v1.1/cs01/xsd/
+     Latest version of narrative specification: http://docs.oasis-open.org/bdxr/bdx-bde/v1.1/bdx-bde-v1.1.html
+     TC IPR Statement: https://www.oasis-open.org/committees/bdxr/ipr.php     
+-->
+<!--
   Library:           OASIS Business Document Envelope (BDE) 1.1 CS01
                      http://docs.oasis-open.org/bdxr/bdx-bde/v1.1/cs01/
-  Release Date:      09 November 2016
+  Release Date:      05 December 2016
   Module:            BDE-PayloadContentDataType-1.1.xsd
   Generated on:      2015-11-06 16:50(UTC)
-  Copyright (c) OASIS Open 2016. All Rights Reserved.
 -->
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns=
                "http://docs.oasis-open.org/bdxr/ns/bde/1.0/AggregateComponents"
