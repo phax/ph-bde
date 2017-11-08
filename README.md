@@ -11,8 +11,9 @@ It is licensed under Apache 2.0 license.
 It requires at least Java 8 to be used.
 
 # News and noteworthy
-  * v2.0.0 - work in progress
+  * v2.0.0 - 2017-11-08
     * Updated to ph-commons 9.0.0
+    * Updated to BDE 1.1 CS 01
   * v1.0.0 - 2016-07-15
     * Initial version
 
@@ -22,14 +23,14 @@ Add the following to your pom.xml to use this artifact:
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-bde</artifactId>
-  <version>1.0.0</version>
+  <version>2.0.0</version>
 </dependency>
 ```
 
 # References
 
   * [OASIS Business Document Envelope Version 1.0](http://docs.oasis-open.org/bdxr/bdx-bde/v1.0/cs01/bdx-bde-v1.0-cs01.html)
-  * [OASIS Business Document Envelope Version 1.1 CS 02](http://docs.oasis-open.org/bdxr/bdx-bde/v1.1/bdx-bde-v1.1.html)
+  * [OASIS Business Document Envelope Version 1.1 CS 01](http://docs.oasis-open.org/bdxr/bdx-bde/v1.1/bdx-bde-v1.1.html)
 
 ---
 
