@@ -11,15 +11,18 @@ It is licensed under Apache 2.0 license.
 It requires at least Java 8 to be used.
 
 # News and noteworthy
+
 * v2.0.1 - work in progress
-  * Removed Maven dependencies to Xades XSDs - never used
+    * Removed Maven dependencies to Xades XSDs - never used
+    * Requires at least ph-commons 9.1.8
 * v2.0.0 - 2017-11-08
-  * Updated to ph-commons 9.0.0
-  * Updated to BDE 1.1 CS 01
+    * Updated to ph-commons 9.0.0
+    * Updated to BDE 1.1 CS 01
 * v1.0.0 - 2016-07-15
-  * Initial version
+    * Initial version
 
 # Maven usage
+
 Add the following to your pom.xml to use this artifact:
 ```
 <dependency>
