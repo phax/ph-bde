@@ -12,7 +12,7 @@ It requires at least Java 8 to be used.
 
 # News and noteworthy
 
-* v2.0.1 - work in progress
+* v2.1.0 - work in progress
     * Removed Maven dependencies to Xades XSDs - never used
     * Requires at least ph-commons 9.2.0
 * v2.0.0 - 2017-11-08
@@ -34,8 +34,8 @@ Add the following to your pom.xml to use this artifact:
 
 # References
 
-  * [OASIS Business Document Envelope Version 1.0](http://docs.oasis-open.org/bdxr/bdx-bde/v1.0/cs01/bdx-bde-v1.0-cs01.html)
-  * [OASIS Business Document Envelope Version 1.1 CS 01](http://docs.oasis-open.org/bdxr/bdx-bde/v1.1/bdx-bde-v1.1.html)
+* [OASIS Business Document Envelope Version 1.0](http://docs.oasis-open.org/bdxr/bdx-bde/v1.0/cs01/bdx-bde-v1.0-cs01.html)
+* [OASIS Business Document Envelope Version 1.1 CS 01](http://docs.oasis-open.org/bdxr/bdx-bde/v1.1/bdx-bde-v1.1.html)
 
 ---
 
