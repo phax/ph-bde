@@ -16,8 +16,9 @@
  */
 package com.helger.bde.builder;
 
+import java.util.List;
+
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import javax.xml.validation.Schema;
 
 import com.helger.bde.CBDE;
@@ -25,8 +26,8 @@ import com.helger.bde.v10.BDE10EnvelopeType;
 import com.helger.bde.v11.BDE11EnvelopeType;
 import com.helger.commons.annotation.Nonempty;
 import com.helger.commons.annotation.ReturnsMutableCopy;
-import com.helger.commons.collection.impl.CommonsArrayList;
 import com.helger.commons.collection.impl.ICommonsList;
+import com.helger.commons.io.resource.ClassPathResource;
 import com.helger.commons.string.StringHelper;
 import com.helger.jaxb.builder.IJAXBDocumentType;
 import com.helger.jaxb.builder.JAXBDocumentType;
@@ -38,16 +39,14 @@ import com.helger.jaxb.builder.JAXBDocumentType;
  */
 public enum EBDEDocumentType implements IJAXBDocumentType
 {
-  BDE10 (BDE10EnvelopeType.class, CBDE.BDE10_XSD_PATH),
-  BDE11 (BDE11EnvelopeType.class, CBDE.BDE11_XSD_PATH);
+  BDE10 (BDE10EnvelopeType.class, CBDE.BDE10_XSDS),
+  BDE11 (BDE11EnvelopeType.class, CBDE.BDE11_XSDS);
 
   private final JAXBDocumentType m_aDocType;
 
-  private EBDEDocumentType (@Nonnull final Class <?> aClass, @Nonnull final String sXSDPath)
+  private EBDEDocumentType (@Nonnull final Class <?> aClass, @Nonnull final List <ClassPathResource> aXSDs)
   {
-    m_aDocType = new JAXBDocumentType (aClass,
-                                       new CommonsArrayList <> (sXSDPath),
-                                       x -> StringHelper.trimEnd (x, "Type"));
+    m_aDocType = new JAXBDocumentType (aClass, aXSDs, x -> StringHelper.trimEnd (x, "Type"));
   }
 
   @Nonnull
@@ -59,9 +58,9 @@ public enum EBDEDocumentType implements IJAXBDocumentType
   @Nonnull
   @Nonempty
   @ReturnsMutableCopy
-  public ICommonsList <String> getAllXSDPaths ()
+  public ICommonsList <ClassPathResource> getAllXSDResources ()
   {
-    return m_aDocType.getAllXSDPaths ();
+    return m_aDocType.getAllXSDResources ();
   }
 
   @Nonnull
@@ -78,8 +77,8 @@ public enum EBDEDocumentType implements IJAXBDocumentType
   }
 
   @Nonnull
-  public Schema getSchema (@Nullable final ClassLoader aClassLoader)
+  public Schema getSchema ()
   {
-    return m_aDocType.getSchema (aClassLoader);
+    return m_aDocType.getSchema ();
   }
 }

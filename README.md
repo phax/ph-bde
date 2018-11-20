@@ -14,7 +14,7 @@ It requires at least Java 8 to be used.
 
 * v2.0.1 - work in progress
     * Removed Maven dependencies to Xades XSDs - never used
-    * Requires at least ph-commons 9.1.8
+    * Requires at least ph-commons 9.2.0
 * v2.0.0 - 2017-11-08
     * Updated to ph-commons 9.0.0
     * Updated to BDE 1.1 CS 01
