@@ -12,7 +12,7 @@ It requires at least Java 8 to be used.
 
 # News and noteworthy
 
-* v2.1.0 - work in progress
+* v2.1.0 - 2018-11-22
     * Removed Maven dependencies to Xades XSDs - never used
     * Requires at least ph-commons 9.2.0
 * v2.0.0 - 2017-11-08
@@ -24,11 +24,12 @@ It requires at least Java 8 to be used.
 # Maven usage
 
 Add the following to your pom.xml to use this artifact:
-```
+
+```xml
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-bde</artifactId>
-  <version>2.0.0</version>
+  <version>2.1.0</version>
 </dependency>
 ```
 
