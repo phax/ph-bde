@@ -28,7 +28,7 @@ import com.helger.jaxb.builder.JAXBValidationBuilder;
  *
  * @author Philip Helger
  * @param <JAXBTYPE>
- *        The BDE implementation class to be read
+ *        The BDE implementation class to be validated
  */
 @NotThreadSafe
 public class BDEValidator <JAXBTYPE> extends JAXBValidationBuilder <JAXBTYPE, BDEValidator <JAXBTYPE>>
@@ -46,7 +46,7 @@ public class BDEValidator <JAXBTYPE> extends JAXBValidationBuilder <JAXBTYPE, BD
   @Nonnull
   public static BDEValidator <BDE10EnvelopeType> envelope10 ()
   {
-    return new BDEValidator<> (EBDEDocumentType.BDE10);
+    return new BDEValidator <> (EBDEDocumentType.BDE10);
   }
 
   /**
@@ -57,6 +57,6 @@ public class BDEValidator <JAXBTYPE> extends JAXBValidationBuilder <JAXBTYPE, BD
   @Nonnull
   public static BDEValidator <BDE11EnvelopeType> envelope11 ()
   {
-    return new BDEValidator<> (EBDEDocumentType.BDE11);
+    return new BDEValidator <> (EBDEDocumentType.BDE11);
   }
 }

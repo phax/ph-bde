@@ -29,7 +29,7 @@ import com.helger.xml.namespace.MapBasedNamespaceContext;
  *
  * @author Philip Helger
  * @param <JAXBTYPE>
- *        The BDE implementation class to be read
+ *        The BDE implementation class to be written
  */
 @NotThreadSafe
 public class BDEWriter <JAXBTYPE> extends JAXBWriterBuilder <JAXBTYPE, BDEWriter <JAXBTYPE>>
@@ -52,7 +52,7 @@ public class BDEWriter <JAXBTYPE> extends JAXBWriterBuilder <JAXBTYPE, BDEWriter
   @Nonnull
   public static BDEWriter <BDE10EnvelopeType> envelope10 ()
   {
-    return new BDEWriter<> (EBDEDocumentType.BDE10);
+    return new BDEWriter <> (EBDEDocumentType.BDE10);
   }
 
   /**
@@ -63,6 +63,6 @@ public class BDEWriter <JAXBTYPE> extends JAXBWriterBuilder <JAXBTYPE, BDEWriter
   @Nonnull
   public static BDEWriter <BDE11EnvelopeType> envelope11 ()
   {
-    return new BDEWriter<> (EBDEDocumentType.BDE11);
+    return new BDEWriter <> (EBDEDocumentType.BDE11);
   }
 }
