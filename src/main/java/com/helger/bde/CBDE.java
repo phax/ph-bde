@@ -25,6 +25,8 @@ import com.helger.commons.annotation.CodingStyleguideUnaware;
 import com.helger.commons.annotation.PresentForCodeCoverage;
 import com.helger.commons.collection.impl.CommonsArrayList;
 import com.helger.commons.io.resource.ClassPathResource;
+import com.helger.xsds.ccts.cct.schemamodule.CCCTS;
+import com.helger.xsds.xmldsig.CXMLDSig;
 
 /**
  * Contains all the constants for BDE handling.
@@ -51,7 +53,9 @@ public final class CBDE
    * must not be specified.
    */
   @CodingStyleguideUnaware
-  public static final List <ClassPathResource> BDE10_XSDS = new CommonsArrayList <> (new ClassPathResource (BDE10_XSD_PATH,
+  public static final List <ClassPathResource> BDE10_XSDS = new CommonsArrayList <> (CCCTS.getXSDResource (),
+                                                                                     CXMLDSig.getXSDResource (),
+                                                                                     new ClassPathResource (BDE10_XSD_PATH,
                                                                                                             _getCL ())).getAsUnmodifiable ();
 
   /** Namespace URI for BDE 1.0 */
@@ -68,7 +72,9 @@ public final class CBDE
    * must not be specified.
    */
   @CodingStyleguideUnaware
-  public static final List <ClassPathResource> BDE11_XSDS = new CommonsArrayList <> (new ClassPathResource (BDE11_XSD_PATH,
+  public static final List <ClassPathResource> BDE11_XSDS = new CommonsArrayList <> (CCCTS.getXSDResource (),
+                                                                                     CXMLDSig.getXSDResource (),
+                                                                                     new ClassPathResource (BDE11_XSD_PATH,
                                                                                                             _getCL ())).getAsUnmodifiable ();
 
   @PresentForCodeCoverage

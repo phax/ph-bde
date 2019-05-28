@@ -6,12 +6,16 @@ OASIS BDE (Business Document Envelope) Java wrapper library.
 It supports easily reading and writing of BDE 1.0 and BDE 1.1 documents.
 It allows conversion between Java domain objects and XML representations.
 
+OASIS BDE is superseded by OASIS/CEFACT XHE (Exchange Header Envelope) 1.0. See [ph-xhe](https://github.com/phax/ph-xhe) for a Java implementation.
+
 It is licensed under Apache 2.0 license.
 
 It requires at least Java 8 to be used.
 
 # News and noteworthy
 
+* v2.2.1 - 2019-05-28
+    * Reusing external CCTS and XMLDSig classes 
 * v2.1.0 - 2018-11-22
     * Removed Maven dependencies to Xades XSDs - never used
     * Requires at least ph-commons 9.2.0
@@ -29,7 +33,7 @@ Add the following to your pom.xml to use this artifact:
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-bde</artifactId>
-  <version>2.1.0</version>
+  <version>2.1.1</version>
 </dependency>
 ```
 

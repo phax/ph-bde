@@ -35,8 +35,7 @@
                schemaLocation="common/BDE-CommonExtensionComponents-1.1.xsd"/>
 
    <!-- ===== Incorporate W3C signature specification-->
-   <xsd:import namespace="http://www.w3.org/2000/09/xmldsig#"
-               schemaLocation="common/BDE-xmldsig1-schema-1.1.xsd"/>
+   <xsd:import namespace="http://www.w3.org/2000/09/xmldsig#"/>
           
    <!-- ===== Element Declarations ===== -->
    <xsd:element name="Envelope" type="EnvelopeType">

@@ -38,14 +38,13 @@
                schemaLocation="common/BDE-CommonExtensionComponents-1.0.xsd"/>
 
    <!-- ===== Incorporate W3C signature specification-->
-   <xsd:import namespace="http://www.w3.org/2000/09/xmldsig#"
-               schemaLocation="common/BDE-xmldsig1-schema-1.0.xsd"/>
+   <xsd:import namespace="http://www.w3.org/2000/09/xmldsig#"/>
 
    <!-- ===== Incorporate ETSI signature specifications-->
-   <xsd:import namespace="http://uri.etsi.org/01903/v1.3.2#"
-               schemaLocation="common/BDE-XAdESv132-1.0.xsd"/>
-   <xsd:import namespace="http://uri.etsi.org/01903/v1.4.1#"
-               schemaLocation="common/BDE-XAdESv141-1.0.xsd"/>
+   <!--
+   <xsd:import namespace="http://uri.etsi.org/01903/v1.3.2#"/>
+   <xsd:import namespace="http://uri.etsi.org/01903/v1.4.1#"/>
+   -->
           
    <!-- ===== Element Declarations ===== -->
    <xsd:element name="Envelope" type="EnvelopeType">

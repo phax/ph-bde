@@ -26,10 +26,12 @@
   <!-- ===== import here all extension schemas ===== -->
 
   <!-- Incorporate ETSI signature specifications -->
+  <!--  
   <xsd:import namespace="http://uri.etsi.org/01903/v1.3.2#"
               schemaLocation="BDE-XAdES01903v132-201601-1.1.xsd"/>
   <xsd:import namespace="http://uri.etsi.org/01903/v1.4.1#"
               schemaLocation="BDE-XAdES01903v141-201601-1.1.xsd"/>
+  -->
 
   <!-- ===== Type Declaration ===== -->
   <xsd:complexType name="ExtensionContentType">
