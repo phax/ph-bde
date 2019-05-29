@@ -14,7 +14,7 @@ It requires at least Java 8 to be used.
 
 # News and noteworthy
 
-* v2.2.1 - 2019-05-28
+* v2.1.1 - 2019-05-28
     * Reusing external CCTS and XMLDSig classes 
 * v2.1.0 - 2018-11-22
     * Removed Maven dependencies to Xades XSDs - never used
