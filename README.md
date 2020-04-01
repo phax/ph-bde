@@ -14,6 +14,8 @@ It requires at least Java 8 to be used.
 
 # News and noteworthy
 
+* v2.2.0 - 2020-04-01
+    * Using a consistent prefix for all type names  
 * v2.1.1 - 2019-05-28
     * Reusing external CCTS and XMLDSig classes 
 * v2.1.0 - 2018-11-22
@@ -33,7 +35,7 @@ Add the following to your pom.xml to use this artifact:
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-bde</artifactId>
-  <version>2.1.1</version>
+  <version>2.2.0</version>
 </dependency>
 ```
 
