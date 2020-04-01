@@ -30,21 +30,33 @@
   <bindings schemaLocation="../resources/schemas/bde10/common/BDE-CommonAggregateComponents-1.0.xsd" node="/xsd:schema">
     <schemaBindings>
       <package name="com.helger.bde.v10.cac" />
+      <nameXmlTransform>
+        <typeName prefix="BDE10" />
+      </nameXmlTransform>
     </schemaBindings>
   </bindings>
   <bindings schemaLocation="../resources/schemas/bde10/common/BDE-CommonBasicComponents-1.0.xsd" node="/xsd:schema">
     <schemaBindings>
       <package name="com.helger.bde.v10.cbc" />
+      <nameXmlTransform>
+        <typeName prefix="BDE10" />
+      </nameXmlTransform>
     </schemaBindings>
   </bindings>
   <bindings schemaLocation="../resources/schemas/bde10/common/BDE-CommonExtensionComponents-1.0.xsd" node="/xsd:schema">
     <schemaBindings>
       <package name="com.helger.bde.v10.cec" />
+      <nameXmlTransform>
+        <typeName prefix="BDE10" />
+      </nameXmlTransform>
     </schemaBindings>
   </bindings>
   <bindings schemaLocation="../resources/schemas/bde10/common/BDE-UnqualifiedDataTypes-1.0.xsd" node="/xsd:schema">
     <schemaBindings>
       <package name="com.helger.bde.v10.uqdt" />
+      <nameXmlTransform>
+        <typeName prefix="BDE10" />
+      </nameXmlTransform>
     </schemaBindings>
   </bindings>
 </bindings>
