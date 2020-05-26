@@ -14,6 +14,8 @@ It requires at least Java 8 to be used.
 
 # News and noteworthy
 
+* v2.2.1 - 2020-05-26
+    * Updated to ph-xsds 2.3.0 (changed Maven groupId)
 * v2.2.0 - 2020-04-01
     * Using a consistent prefix for all type names  
 * v2.1.1 - 2019-05-28
@@ -29,13 +31,13 @@ It requires at least Java 8 to be used.
 
 # Maven usage
 
-Add the following to your pom.xml to use this artifact:
+Add the following to your pom.xml to use this artifact, replacing `x.y.z` with the real version number:
 
 ```xml
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-bde</artifactId>
-  <version>2.2.0</version>
+  <version>x.y.z</version>
 </dependency>
 ```
 
