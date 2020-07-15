@@ -46,7 +46,7 @@ public class BDEReader <JAXBTYPE> extends JAXBReaderBuilder <JAXBTYPE, BDEReader
   @Nonnull
   public static BDEReader <BDE10EnvelopeType> envelope10 ()
   {
-    return new BDEReader<> (EBDEDocumentType.BDE10, BDE10EnvelopeType.class);
+    return new BDEReader <> (EBDEDocumentType.BDE10, BDE10EnvelopeType.class);
   }
 
   /**
@@ -57,6 +57,6 @@ public class BDEReader <JAXBTYPE> extends JAXBReaderBuilder <JAXBTYPE, BDEReader
   @Nonnull
   public static BDEReader <BDE11EnvelopeType> envelope11 ()
   {
-    return new BDEReader<> (EBDEDocumentType.BDE11, BDE11EnvelopeType.class);
+    return new BDEReader <> (EBDEDocumentType.BDE11, BDE11EnvelopeType.class);
   }
 }
