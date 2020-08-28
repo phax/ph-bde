@@ -12,8 +12,22 @@ It is licensed under Apache 2.0 license.
 
 It requires at least Java 8 to be used.
 
+# Maven usage
+
+Add the following to your pom.xml to use this artifact, replacing `x.y.z` with the real version number:
+
+```xml
+<dependency>
+  <groupId>com.helger</groupId>
+  <artifactId>ph-bde</artifactId>
+  <version>x.y.z</version>
+</dependency>
+```
+
 # News and noteworthy
 
+* v2.2.2 - 2020-08-28
+    * Using Java 8 date and time classes for JAXB created classes
 * v2.2.1 - 2020-05-26
     * Updated to ph-xsds 2.3.0 (changed Maven groupId)
 * v2.2.0 - 2020-04-01
@@ -28,18 +42,6 @@ It requires at least Java 8 to be used.
     * Updated to BDE 1.1 CS 01
 * v1.0.0 - 2016-07-15
     * Initial version
-
-# Maven usage
-
-Add the following to your pom.xml to use this artifact, replacing `x.y.z` with the real version number:
-
-```xml
-<dependency>
-  <groupId>com.helger</groupId>
-  <artifactId>ph-bde</artifactId>
-  <version>x.y.z</version>
-</dependency>
-```
 
 # References
 
