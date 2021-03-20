@@ -26,6 +26,8 @@ Add the following to your pom.xml to use this artifact, replacing `x.y.z` with t
 
 # News and noteworthy
 
+* v2.2.4 - work in progress
+    * Updated to ph-commons 10
 * v2.2.3 - 2020-09-17
     * Updated to Jakarta JAXB 2.3.3
 * v2.2.2 - 2020-08-28
