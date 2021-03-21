@@ -14,7 +14,7 @@ It requires at least Java 8 to be used.
 
 # Maven usage
 
-Add the following to your pom.xml to use this artifact, replacing `x.y.z` with the real version number:
+Add the following to your pom.xml to use this artifact, replacing `x.y.z` with the effective version number:
 
 ```xml
 <dependency>
@@ -26,7 +26,7 @@ Add the following to your pom.xml to use this artifact, replacing `x.y.z` with t
 
 # News and noteworthy
 
-* v2.2.4 - work in progress
+* v2.3.0 - work in progress
     * Updated to ph-commons 10
 * v2.2.3 - 2020-09-17
     * Updated to Jakarta JAXB 2.3.3
