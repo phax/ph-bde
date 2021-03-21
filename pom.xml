@@ -25,7 +25,7 @@
     <version>1.11.3</version>
   </parent>
   <artifactId>ph-bde</artifactId>
-  <version>2.3.0-SNAPSHOT</version>
+  <version>2.3.0</version>
   <packaging>bundle</packaging>
   <name>ph-bde</name>
   <description>Library for reading and writing OASIS BDE documents</description>
@@ -44,7 +44,7 @@
     <connection>scm:git:git@github.com:phax/ph-bde.git</connection>
     <developerConnection>scm:git:git@github.com:phax/ph-bde.git</developerConnection>
     <url>http://github.com/phax/ph-bde</url>
-    <tag>HEAD</tag>
+    <tag>ph-bde-2.3.0</tag>
   </scm>
 
   <organization>
